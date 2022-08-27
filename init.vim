@@ -31,6 +31,7 @@ set cc=80 "set a column at 80 characters
 "Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au TextYankPost * silent! lua vim.highlight.on_yank { timeout=500 }
+:tnoremap <Esc> <C-\><C-n>
 
 "  saving files
 nnoremap zz :update<cr>
@@ -108,9 +109,12 @@ let g:coc_global_extensions = [
     \'coc-json', 'coc-clangd', 'coc-cmake', 
     \'coc-css', 'coc-cssmodules', 'coc-emmet', 
     \'coc-html', 'coc-jedi', 'coc-prettier', 
-    \'coc-sql', 'coc-tsserver', 'coc-snippets'
+    \'coc-sql', 'coc-tsserver', 'coc-snippets',
+    \'coc-eslint',
     \]
 
+" prettier config
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Some servers have issues with backup files, see #649.
 set nobackup

@@ -11,8 +11,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete plugin
     Plug 'alvan/vim-closetag' " Close tag
     Plug 'tpope/vim-surround' " Surround selection
+    Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive' " Git support plugin for vim 
+    Plug 'rbong/vim-flog'
     "Fuzzy finder 
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
     Plug 'junegunn/fzf.vim'
+    Plug  'easymotion/vim-easymotion'
 call plug#end()
